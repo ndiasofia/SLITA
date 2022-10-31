@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "toastr";
+@import "select2";
+@import "spin.js/spin.css";
+@import "./vendor/select2.scss";
+@import "~tippy.js/dist/tippy.css";
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__display {
+    cursor: default;
+    padding-left: 2px;
+    padding-right: 5px;
+    white-space: normal;
+}
+
+.tippy-box {
+    background-color: #fff;
+    color: #333c4d;
+    border-radius: 0.5rem;
+}
