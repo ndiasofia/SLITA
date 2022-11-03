@@ -175,7 +175,14 @@ class Pengajuan extends BaseController
                 array_push($dta,$data_3);                    
                 // $this->pengajuanModel->insert($data_2);           
             }
-            $this->pengajuanModel->insertBatch($dta);                           
+            $this->pengajuanModel->insertBatch($dta);  
+            if ($dta == null) {
+                $response = [
+                    'errors' => $this->validation->getErrors(),
+                    'message' => 'Periksa kembali isian anda'
+                ];
+                return $this->respond($response, 422);
+            }                         
             $keterangan = implode(',' , $nmBerkas);
             // Data pembayaran
             $data_alumni = $this->alumniModel->where('nim', session('nim'))->first();

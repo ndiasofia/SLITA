@@ -14,10 +14,6 @@
         <td>: <?= $data['nim'] ?></td>
     </tr>
     <tr>
-        <td>Password</td>
-        <td>: <?= $data['password'] ?></td>
-    </tr>
-    <tr>
         <td>Email</td>
         <td>: <?= $data['email'] ?></td>
     </tr>
